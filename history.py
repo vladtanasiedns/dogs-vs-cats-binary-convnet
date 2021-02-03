@@ -1,12 +1,13 @@
 import matplotlib.pyplot as plt
 import json
 
-history = json.loads('./history.json')
+with open("./cats_dogs.json", "r") as f:
+    history = json.load(f)
 
 print(history)
 
-acc = history['acc']
-val_acc = history['val_acc']
+acc = history['accuracy']
+val_acc = history['val_accuracy']
 loss = history['loss']
 val_loss = history['val_loss']
 
